@@ -1,0 +1,28 @@
+{
+  "name": "sfinc-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "seed": "node utils/seed",
+    "heroku-postbuild": "node utils/seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lola-violet/sfinc-back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lola-violet/sfinc-back/issues"
+  },
+  "homepage": "https://github.com/lola-violet/sfinc-back#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.4"
+  }
+}
