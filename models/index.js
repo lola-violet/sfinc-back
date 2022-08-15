@@ -1,25 +1,17 @@
-const Traveller = require('./Traveller');
-const Location = require('./Location');
-const Trip = require('./Trip');
+const PjCategory = require('./PjCategory');
+const Example = require('./Example');
+const ImgTag = require('./ImgTag');
+const PjImage = require('./PjImage');
 
-Traveller.belongsToMany(Location, {
-  // Define the third table needed to store the foreign keys
-  through: {
-    model: Trip,
-    unique: false
-  },
-  // Define an alias for when data is retrieved
-  as: 'planned_trips'
-});
 
-Location.belongsToMany(Traveller, {
-  // Define the third table needed to store the foreign keys
-  through: {
-    model: Trip,
-    unique: false
-  },
-  // Define an alias for when data is retrieved
-  as: 'location_travellers'
-});
+// Relationships
+PjCategory.hasMany(Example);
+Example.hasOne(PjCategory);
 
-module.exports = { Traveller, Location, Trip };
+Example.hasMany(PjImage);
+PjImage.hasOne(Example);
+
+ImgTag.hasMany(PjImage);
+PjImage.hasOne(ImgTag);
+
+module.exports = { PjCategory, Example, ImgTag, PjImage };
