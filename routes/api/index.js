@@ -2,7 +2,7 @@ const router = require('express').Router();
 const exampleRoutes = require('./exampleRoutes');
 const imgTagRoutes = require('./imgTagRoutes');
 const pjCategoryRoutes = require('./pjCategoryRoutes');
-const pjImageRoutes = require('./pjImageRoutes')
+const pjImageRoutes = require('./pjImageRoutes');
 
 router.use('/examples', exampleRoutes);
 router.use('/imgtags', imgTagRoutes);
