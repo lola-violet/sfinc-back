@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Example, ImgTag, ImgTag, PjImage } = require('../../models');
+const { Example, ImgTag, PjCategory, PjImage } = require('../../models');
 
 // GET all img tags
 router.get('/', async (req, res) => {
