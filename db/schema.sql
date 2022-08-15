@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS sfinc_db;
+CREATE DATABASE sfinc_db;
